@@ -190,8 +190,6 @@ The project follows the complete engineering workflow:
 
 ## Acknowledgement
 
-This project was completed as part of the **B.S. in Electronic Systems** laboratory coursework at the **Indian Institute of Technology Madras**.
-
 The hardware implementation, breadboard assembly, testing, project documentation, photographs, and demonstration videos are my original work. Laboratory reference material provided during the course was used solely for learning and understanding the concepts.
 
 ---
