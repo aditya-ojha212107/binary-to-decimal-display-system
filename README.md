@@ -156,17 +156,13 @@ The hardware demonstrated accurate decimal outputs for all input combinations.
 
 ## Demonstration Videos
 
-### Part 1 – Manual Binary to Decimal Display
+### Part 1 – Manual Binary to Decimal Display: https://youtu.be/X1XSMR6EOH0
 
-*(Paste your YouTube link here.)*
 
----
 
-### Part 2 – Automatic Binary Counter Demonstration
+### Part 2 – Automatic Binary Counter Demonstration: https://youtu.be/ftOyYPs8k7s
 
-*(Paste your YouTube link here.)*
 
----
 
 ## Key Learning Outcomes
 
