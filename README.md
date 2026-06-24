@@ -87,9 +87,11 @@ Complete hardware implementation using TTL Logic ICs.
 ![Decimal 9](images/manual_operation/decimal_9.jpeg)
 
 ### Decimal 12
+
 ![Decimal 12](images/manual_operation/decimal_12.jpeg)
 
 ### Decimal 15
+
 ![Decimal 15](images/manual_operation/decimal_15.jpeg)
 
 The circuit was tested for all binary combinations from 0000 to 1111.
@@ -108,11 +110,11 @@ The SN74LS163 counter automatically generates binary counts while the display sy
 
 ### Manual Binary to Decimal Display
 
-https://youtu.be/X1XSMR6EOH0
+[Manual Binary to Decimal Display Demonstration](https://youtu.be/X1XSMR6EOH0)
 
 ### Automatic Counter Demonstration
 
-https://youtu.be/ftOyYPs8k7s
+[Automatic Counter Demonstration](https://youtu.be/ftOyYPs8k7s)
 
 ---
 
