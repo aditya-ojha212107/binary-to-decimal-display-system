@@ -20,9 +20,12 @@ The system accepts a 4-bit binary input (0000–1111) and displays its correspon
 
 The system uses a 74LS85 comparator to determine whether the binary input exceeds decimal 9. When required, a 74LS83 binary adder performs BCD correction. The corrected BCD data is decoded by two 74LS47 display drivers and displayed on two common-anode seven-segment displays.
 
+![System Architecture](images/reference/block_diagram.png)
+
 ---
 
 ## Components Used
+![Components Used](images/reference/components_used.jpeg)
 
 ### Digital Logic ICs
 
@@ -69,6 +72,7 @@ The display system converts each binary value into its corresponding decimal out
 
 Complete hardware implementation using TTL Logic ICs.
 
+![Breadboard Implementation](images/hardware/complete_breadboard.jpg)
 ---
 
 ## Manual Testing Results
