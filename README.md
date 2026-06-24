@@ -25,7 +25,7 @@ The system uses a 74LS85 comparator to determine whether the binary input exceed
 ---
 
 ## Components Used
-![Components Used](images/reference/components_used.jpeg)
+![Components Used](images/reference/components_used.png)
 
 ### Digital Logic ICs
 
@@ -72,16 +72,25 @@ The display system converts each binary value into its corresponding decimal out
 
 Complete hardware implementation using TTL Logic ICs.
 
-![Breadboard Implementation](images/hardware/complete_breadboard.jpg)
+![Breadboard Implementation](images/hardware/complete_breadboard.jpeg)
+
 ---
 
 ## Manual Testing Results
 
 ### Decimal 0
 
+![Decimal 0](images/manual_operation/decimal_0.jpeg)
+
 ### Decimal 9
 
+![Decimal 9](images/manual_operation/decimal_9.jpeg)
+
+### Decimal 12
+![Decimal 12](images/manual_operation/decimal_12.jpeg)
+
 ### Decimal 15
+![Decimal 15](images/manual_operation/decimal_15.jpeg)
 
 The circuit was tested for all binary combinations from 0000 to 1111.
 
@@ -90,6 +99,8 @@ The circuit was tested for all binary combinations from 0000 to 1111.
 ## Automatic Counter Demonstration
 
 The SN74LS163 counter automatically generates binary counts while the display system continuously converts them into decimal outputs.
+
+![Automatic Operation](images/automatic_operation/automatic_view_1.jpeg)
 
 ---
 
@@ -109,9 +120,20 @@ https://youtu.be/ftOyYPs8k7s
 
 images/
 ├── reference/
+│   ├── block_diagram.png
+│   └── components_used.png
+│
 ├── hardware/
+│   └── complete_breadboard.jpeg
+│
 ├── manual_operation/
+│   ├── decimal_0.jpeg
+│   ├── decimal_9.jpeg
+│   ├── decimal_12.jpeg
+│   └── decimal_15.jpeg
+│
 └── automatic_operation/
+    └── automatic_view_1.jpeg
 
 ---
 
@@ -131,10 +153,10 @@ images/
 
 ## Author
 
-Aditya Ojha
+**Aditya Ojha**
 
-B.S. Electronic Systems
+B.S. Electronic Systems  
 Indian Institute of Technology Madras
 
-B.Tech Electronics & Telecommunication Engineering
+B.Tech Electronics & Telecommunication Engineering  
 Jabalpur Engineering College
