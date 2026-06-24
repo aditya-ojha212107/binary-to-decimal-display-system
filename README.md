@@ -120,6 +120,7 @@ The SN74LS163 counter automatically generates binary counts while the display sy
 
 ## Repository Structure
 
+```text
 images/
 ├── reference/
 │   ├── block_diagram.png
@@ -136,6 +137,7 @@ images/
 │
 └── automatic_operation/
     └── automatic_view_1.jpeg
+```
 
 ---
 
