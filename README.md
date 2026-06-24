@@ -1,36 +1,24 @@
-# binary-to-decimal-display-system
+# Binary to Decimal Display System
 
-A complete digital electronics hardware project demonstrating the design, implementation, and testing of a **4-bit Binary to Decimal Display System** using standard **TTL Logic ICs**.
+A complete digital electronics hardware project demonstrating the design, implementation, and testing of a 4-bit Binary to Decimal Display System using standard TTL Logic ICs.
 
-The system accepts a 4-bit binary input (0000–1111) and displays its corresponding decimal value (0–15) on two common-anode 7-segment displays. The project was designed and implemented entirely using digital logic hardware without any programmable device.
-
-Unlike software-based implementations, this project relies solely on TTL logic circuits, providing practical experience in digital hardware design, binary arithmetic, BCD conversion, and seven-segment display interfacing.
+The system accepts a 4-bit binary input (0000–1111) and displays its corresponding decimal value (0–15) on two common-anode 7-segment displays.
 
 ---
 
 ## Project Objectives
 
-* Design a hardware-based Binary to Decimal Display System.
-* Convert 4-bit binary numbers (0–15) into decimal representation.
-* Implement Binary Coded Decimal (BCD) correction using TTL logic.
-* Interface two common-anode 7-segment displays.
-* Verify the circuit through practical breadboard implementation.
-* Demonstrate both manual and automated operation.
+* Design a hardware-based Binary to Decimal Display System
+* Convert 4-bit binary numbers into decimal representation
+* Implement BCD correction using TTL logic
+* Interface common-anode seven-segment displays
+* Verify operation through practical hardware implementation
 
 ---
 
-## Project Features
+## System Architecture
 
-* Pure TTL Logic implementation
-* No Microcontroller
-* No Arduino
-* No FPGA or CPLD
-* Breadboard implementation
-* Manual binary input using switches
-* Automatic binary counting using a synchronous counter
-* Two 7-segment decimal display output
-* Complete hardware verification
-* Demonstration videos included
+The system uses a 74LS85 comparator to determine whether the binary input exceeds decimal 9. When required, a 74LS83 binary adder performs BCD correction. The corrected BCD data is decoded by two 74LS47 display drivers and displayed on two common-anode seven-segment displays.
 
 ---
 
@@ -40,133 +28,90 @@ Unlike software-based implementations, this project relies solely on TTL logic c
 
 * 74LS85 – 4-Bit Magnitude Comparator
 * 74LS83 – 4-Bit Binary Full Adder
-* 74LS47 (×2) – BCD to Seven Segment Decoder/Driver
-* SN74LS163 – 4-Bit Synchronous Binary Counter (Automatic Mode)
-* CD40106 – Hex Schmitt Trigger Inverter (Clock Generation)
+* 74LS47 ×2 – BCD to Seven Segment Decoder Driver
+* SN74LS163 – Synchronous Binary Counter
+* CD40106 – Schmitt Trigger Inverter
 
 ### Other Components
 
 * Two Common Anode Seven Segment Displays
 * Breadboard
 * Toggle Switches
-* 330 Ω Current Limiting Resistors
-* +5V Power Supply
+* 330 Ω Resistors
+* ADALM1000 Power Source
 * Jumper Wires
 
 ---
 
 ## Working Principle
 
-The project is implemented in two stages.
+### Manual Mode
 
-### Part 1 – Manual Binary Input
+The binary input is applied using toggle switches.
 
-A 4-bit binary number is entered manually using toggle switches.
+The 74LS85 compares the input against decimal 9.
 
-The 74LS85 Magnitude Comparator continuously compares the input with decimal 9. When the input exceeds 9, the comparator enables the 74LS83 Binary Adder to perform the required BCD correction.
+When the input exceeds 9, the comparator enables the 74LS83 adder to add the required BCD correction value.
 
-The corrected BCD outputs are decoded by two 74LS47 ICs to drive the common-anode 7-segment displays, producing decimal outputs from 0 to 15.
+The corrected BCD output is decoded by two 74LS47 ICs and displayed as a decimal number.
 
----
+### Automatic Mode
 
-### Part 2 – Automatic Binary Counting
+An SN74LS163 synchronous counter automatically generates binary counts.
 
-The manual input stage is extended using the SN74LS163 synchronous binary counter.
+A clock generated using a CD40106 Schmitt Trigger continuously advances the count from 0000 to 1111.
 
-A clock generated using the CD40106 Schmitt Trigger automatically advances the binary count from 0000 to 1111.
-
-The existing comparator, adder, and decoder circuitry converts each count into its corresponding decimal display, demonstrating continuous automatic operation.
+The display system converts each binary value into its corresponding decimal output.
 
 ---
 
-## Digital Logic Flow
+## Breadboard Implementation
 
-Binary Input
-
-↓
-
-74LS85 Magnitude Comparator
-
-↓
-
-74LS83 Binary Full Adder
-
-↓
-
-74LS47 Decoder Drivers
-
-↓
-
-Common Anode Seven Segment Displays
-
-↓
-
-Decimal Output (0–15)
+Complete hardware implementation using TTL Logic ICs.
 
 ---
 
-## Repository Contents
+## Manual Testing Results
 
-| File                    | Description                                  |
-| ----------------------- | -------------------------------------------- |
-| Circuit Schematic       | Complete hardware circuit design             |
-| Breadboard Images       | Hardware implementation photographs          |
-| Manual Demonstration    | Working images using manual binary input     |
-| Automatic Demonstration | Images showing automatic counting operation  |
-| Project Videos          | Manual and automatic hardware demonstrations |
-| README.md               | Project documentation                        |
+### Decimal 0
 
----
+### Decimal 9
 
-## Hardware Verification
+### Decimal 15
 
-The complete circuit was assembled on a breadboard and tested using all possible 4-bit binary inputs (0000–1111).
-
-Both manual operation and automatic counting were successfully verified.
-
-The hardware demonstrated accurate decimal outputs for all input combinations.
+The circuit was tested for all binary combinations from 0000 to 1111.
 
 ---
 
-## Project Images
+## Automatic Counter Demonstration
 
-### Circuit Schematic
-
-*(Replace this text with the circuit schematic image.)*
-
----
-
-### Breadboard Implementation
-
-*(Replace this text with the hardware implementation image.)*
-
----
-
-### Manual Demonstration
-
-*(Replace this text with photographs of the manual operation.)*
-
----
-
-### Automatic Counter Demonstration
-
-*(Replace this text with photographs of the automatic counter.)*
+The SN74LS163 counter automatically generates binary counts while the display system continuously converts them into decimal outputs.
 
 ---
 
 ## Demonstration Videos
 
-### Part 1 – Manual Binary to Decimal Display: https://youtu.be/X1XSMR6EOH0
+### Manual Binary to Decimal Display
 
+https://youtu.be/X1XSMR6EOH0
 
+### Automatic Counter Demonstration
 
-### Part 2 – Automatic Binary Counter Demonstration: https://youtu.be/ftOyYPs8k7s
+https://youtu.be/ftOyYPs8k7s
 
+---
 
+## Repository Structure
+
+images/
+├── reference/
+├── hardware/
+├── manual_operation/
+└── automatic_operation/
+
+---
 
 ## Key Learning Outcomes
-
-This project provided practical experience in:
 
 * TTL Digital Logic Design
 * Binary to Decimal Conversion
@@ -175,27 +120,17 @@ This project provided practical experience in:
 * Binary Addition
 * Seven Segment Display Interfacing
 * Breadboard Circuit Construction
-* Hardware Debugging and Testing
-* Digital System Integration
-
-The project follows the complete engineering workflow:
-
-**Digital Logic Design → Circuit Implementation → Hardware Testing → Verification → Project Documentation**
-
----
-
-## Acknowledgement
-
-The hardware implementation, breadboard assembly, testing, project documentation, photographs, and demonstration videos are my original work. Laboratory reference material provided during the course was used solely for learning and understanding the concepts.
+* Hardware Debugging
+* System Verification
 
 ---
 
 ## Author
 
-**Aditya Ojha**
+Aditya Ojha
 
-**B.S. Electronic Systems**
+B.S. Electronic Systems
 Indian Institute of Technology Madras
 
-**B.Tech Electronics & Telecommunication Engineering**
+B.Tech Electronics & Telecommunication Engineering
 Jabalpur Engineering College
